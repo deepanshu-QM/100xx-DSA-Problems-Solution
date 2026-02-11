@@ -1,5 +1,5 @@
 
-// https://codeforces.com/group/4vcXCPx8NY/contest/669913/problem/C
+// https://codeforces.com/group/4vcXCPx8NY/contest/669913/problem/D
 
 #include<iostream>
 using namespace std;
@@ -13,15 +13,15 @@ int main(){
         cin>>arr[i];
     }
 
-    long long minElm = arr[0];
+    long long maxElm = arr[0];
     int pos = 0;
     for(int i=0;i<N;i++){
-        if(arr[i] < minElm){
-            minElm = arr[i];
+        if(arr[i] > maxElm){
+            maxElm = arr[i];
             pos = i;
         }
     }
-    cout<<minElm<<" "<<pos+1<<endl;
+    cout<<maxElm<<" "<<pos+1<<endl;
 
     return 0;
 }
