@@ -1,4 +1,5 @@
 
+/* https://codeforces.com/group/4vcXCPx8NY/contest/666169/problem/G */
 
 #include<iostream>
 using namespace std;
