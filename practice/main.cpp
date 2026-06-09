@@ -1,31 +1,32 @@
 
-
 /*
-Origin — if X=0
- and Y=0
-X axis — if Y=0
- and X≠0
-Y axis — if X=0
- and Y≠0
-1st Quadrant — if X>0
- and Y>0
-2nd Quadrant — if X<0
- and Y>0
-3rd Quadrant — if X<0
- and Y<0
-4th Quadrant — if X>0
- and Y<0*/
+ou are given a positive integer n
+.
 
- #include<iostream>
- using namespace std;
+Print the integers from 1
+ to n
+ (inclusive), each on a separate line.
 
- int main(){
-    long long X,Y;
-    cin>>X>>Y;
+Input
+The input contains a single integer n
+ (1≤n≤2⋅105)
+.
 
-    if(X = 0 && Y = 0){
-        cout<<"Origin"<<endl;
-    }else if(X != 0 && Y = 0){
-        cout<<"X axis "
+Output
+Print n
+ lines. On the i
+-th line, output the integer i
+ (1≤i≤n)
+.*/
+
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+
+    for(int i=1;i<=n;i++){
+        cout<<i<<endl;
     }
- }
+    return 0;
+}
