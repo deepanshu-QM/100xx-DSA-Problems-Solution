@@ -1,15 +1,25 @@
 
-#include <iostream>
+//https://codeforces.com/group/4vcXCPx8NY/contest/666169/problem/N
+
+#include<iostream>
 using namespace std;
 
-int main() {
-    int amount = 289;
-    int coins[] = {100, 50, 20, 10, 5, 1};
+int main(){
+    long long n,temp,digit;
+    cin>>n;
 
-    for(int i = 0; i < 6; i++) {
-        while(amount >= coins[i]) {
-            amount -= coins[i];
-            cout << coins[i] << " ";
-        }
+    digit = 0;
+    temp = n;
+    while(n!=0){
+        digit = (digit *10)+(n%10);
+        n = n/10;
     }
+
+    if(temp == digit){
+        cout<<"YES"<<endl;
+    }else{
+        cout<<"NO"<<endl;
+    }
+
+    return 0;
 }
