@@ -1,15 +1,55 @@
 
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 
-int main(){
-    long long n,temp=0;
-    cin>>n;
+int main() {
+    string str;
+    cin >> str;
 
-    while(n>0){
-        temp = temp * 10 + (n%10);
-        n = n/10;
+    int state = 0; 
+
+    for(char ch : str) {
+        switch(state) {
+            case 0: // q0
+                if(ch == '0')
+                    state = 1;
+                else if(ch == '1')
+                    state = 0;
+                else {
+                    cout << "Invalid Input";
+                    return 0;
+                }
+                break;
+
+            case 1: // q1
+                if(ch == '0')
+                    state = 1;
+                else if(ch == '1')
+                    state = 2;
+                else {
+                    cout << "Invalid Input";
+                    return 0;
+                }
+                break;
+
+            case 2: 
+                if(ch == '0')
+                    state = 1;
+                else if(ch == '1')
+                    state = 0;
+                else {
+                    cout << "Invalid Input";
+                    return 0;
+                }
+                break;
+        }
     }
-    cout<<temp<<endl;
+
+    if(state == 2)
+        cout << "Accepted";
+    else
+        cout << "Rejected";
+
     return 0;
 }
