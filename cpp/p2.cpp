@@ -14,3 +14,14 @@ Constraints:
 s contains only alphabetic characters (both uppercase and lowercase).
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s,temp;
+    getline(cin,s);
+    for(int i=s.size()-1;i>=0;i--){
+        temp.push_back(s[i]);
+    }
+    cout<<temp<<endl;
+}
