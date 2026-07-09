@@ -1,4 +1,5 @@
-/*
+/* https://www.hackerrank.com/challenges/c-tutorial-strings/problem
+
 Input Format
 You are given two strings,  and , separated by a new line. Each string will consist of lower case Latin characters ('a'-'z').
 
