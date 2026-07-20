@@ -1,4 +1,6 @@
 
+/* Time Complexity : o(n) , if target Element at position : 1 (index =0), then it is : o(1)
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -17,3 +19,4 @@ int main(){
     cout<<"Pos : "<<pos<<endl;
     return 0;
 }
+
