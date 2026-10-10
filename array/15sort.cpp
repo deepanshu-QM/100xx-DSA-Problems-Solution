@@ -17,9 +17,9 @@ int main(){
         int ones = 0;
         int N[n];
         for(int j=0;j<n;j++){
-            cin>>N[i];
+            cin>>N[j];
 
-            if(N[i] == 0)
+            if(N[j] == 0)
                 zeros++;
              else 
                 ones++;
