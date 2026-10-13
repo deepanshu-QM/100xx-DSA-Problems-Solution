@@ -1,80 +1,78 @@
-#include <iostream>
+
+//Implementation Of stack by using the array 
+//Operation : a) adding Element(push) b) Deleting element(pop) c)Display Elements d) What is Top Element
+
+#include<iostream>
 using namespace std;
 
-#define INT_MAX 10
+const int SIZE = 6;
 
 class Stack {
-private:
-    int stk[INT_MAX];
+    int data[SIZE];
     int top;
 
-public:
-    Stack() {
+    public:
+
+    Stack(){
         top = -1;
     }
 
-    // Adding element into stack
-    void push(int x) {
-        if (top >= INT_MAX - 1) {
-            cout << "Stack Overflow\n";
+    //adding Element inside Stack :
+    void push(int value){
+        if(top == SIZE - 1){
+            cout<<"Stack is overFlow \n"<<endl;
             return;
         }
-
         top++;
-        stk[top] = x;
-
-        cout << x << " : Pushed into Stack\n";
+        data[top] = value;
+        cout<<"Inserted value : "<<value<<" \n";
     }
 
-    // Remove element from stack
-    void pop() {
-        if (top == -1) {
-            cout << "Stack Underflow\n";
+    void pop(){
+        if(top == -1){
+            cout<<"Stack is UnderFlow \n"<<endl;
             return;
         }
-
-        cout << stk[top] << " : Pop from Stack\n";
+        cout<<"Deleted Value : "<<data[top]<<" \n";
         top--;
     }
 
-    // Top element
-    void peek() {
-        if (top == -1) {
-            cout << "Stack is Empty\n";
+    //Traversal Through Stack (means backward)
+    void traversal(){
+        if(top == -1){
+            cout<<"Stack is Empty \n"<<endl;
             return;
         }
-
-        cout << "Top Element: " << stk[top] << endl;
+        for(int i=top;i>=0;i--){
+            cout<<data[i]<<" ";
+        }cout<<endl;
     }
 
-    // Display stack
-    void display() {
-        if (top == -1) {
-            cout << "Stack is Empty\n";
+    void peek(){
+        if(top == -1){
+            cout<<"Stack is Empty \n"<<endl;
             return;
+        }else{
+            cout<<"Top Element : "<<data[top]<<" ";
         }
-
-        for (int i = top; i >= 0; i--) {
-            cout << stk[i] << " ";
-        }
-
-        cout << endl;
     }
 };
 
-int main() {
+int main(){
     Stack s;
-
-    s.push(21);
-    s.push(22);
-    s.push(23);
-    s.push(90);
+    s.push(1);
+    s.push(2);
+    s.push(3);
+    s.push(4);
+    s.push(5);
 
     s.pop();
+    s.pop();
+
+    cout<<"Elements are inside stack : "<<endl;
+    s.traversal();
 
     s.peek();
 
-    s.display();
 
-    return 0;
 }
