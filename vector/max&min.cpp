@@ -19,7 +19,7 @@ int Max_Min(vector<int>& x){
         if(x[i] < min)
         {min = x[i]; }
     }
-    cout<<"Max : \n"<<max<<"\nMin : "<<min<<endl;
+    cout<<"Max : "<<max<<"\nMin : "<<min<<endl;
 }
 int main(){
     vector<int>x = {12,5,27,3,9};
